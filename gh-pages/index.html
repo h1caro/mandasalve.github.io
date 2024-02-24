@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manda Salve</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    
+    .button {
+      background-color: #0000FF;
+      border: none;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin: 0 auto;
+      display: block;
+      cursor: pointer;
+    }
+    
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+    
+    .popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffffff;
+      padding: 20px;
+      border: 1px solid #0000FF;
+      border-radius: 10px;
+    }
+    
+    .popup-content img {
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Manda Salve</h1>
+  <button class="button" onclick="mostrarPopup()">Manda Salve</button>
+  
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <img src="https://static.wikia.nocookie.net/famosos/images/3/3d/Edukof.jpg/revision/latest/scale-to-width-down/250?cb=20210526105955&path-prefix=pt-br" alt="EduKof">
+      <h1>Salve</h1>
+      <p>EDUKOF MANDA SALVEEEEE</p>
+      <button class="button" onclick="fecharPopup()">Fechar</button>
+    </div>
+  </div>
+  
+  <script>
+    function mostrarPopup() {
+      document.getElementById("popup").style.display = "block";
+    }
+    
+    function fecharPopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+</body>
+</html>
 
